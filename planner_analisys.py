@@ -15,7 +15,7 @@ def main():
     downloader = VideoDownloader()
     download = downloader.download(url)
 
-    print(download)
+    print(download.message)
 
     if not download.success:
         return

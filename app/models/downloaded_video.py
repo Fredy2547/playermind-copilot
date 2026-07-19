@@ -6,6 +6,11 @@ from pathlib import Path
 class DownloadedVideo:
     """Represents a successfully downloaded video."""
     
+    video_id: str
     url: str
     title: str
     file_path: Path
+
+    @property
+    def youtube_url(self) -> str:
+        return f"https://www.youtube.com/watch?v={self.video_id}"

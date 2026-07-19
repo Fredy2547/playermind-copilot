@@ -18,7 +18,10 @@ class FrameExtractor:
 
         fps = cap.get(cv2.CAP_PROP_FPS)
 
-        frame_step = max(1, int(fps * plan.frame_interval_seconds))
+        frame_step = max(
+            1,
+            int(fps * plan.frame_interval_seconds)
+        )
 
         saved_files = []
 
@@ -56,5 +59,6 @@ class FrameExtractor:
             video_title=video_path.stem,
             folder=plan.frames_folder,
             files=saved_files,
-            frame_interval_seconds=plan.frame_interval_seconds
+            frame_interval_seconds=plan.frame_interval_seconds,
+            original_total_frames=extracted
         )
