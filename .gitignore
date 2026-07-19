@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated content
+videos/
+frames/
+workspace/
+reports/
+data/
+
+# Environment
+.env
+
+# IDE
+.vscode/
