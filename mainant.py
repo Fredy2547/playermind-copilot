@@ -2,12 +2,12 @@ from time import perf_counter
 
 from app.services.analysis_planner import AnalysisPlanner
 from app.services.frame_analyzer import FrameAnalyzer
-## from app.services.frame_extractor import FrameExtractor
-## from app.services.frame_filter import FrameFilter
+from app.services.frame_extractor import FrameExtractor
+from app.services.frame_filter import FrameFilter
 from app.services.frame_extractor import FrameExtractor
 from app.services.video_downloader import VideoDownloader
 from app.services.video_inspector import VideoInspector
-from app.services.scene_frame_extractor import SceneFrameExtractor
+
 
 
 def main():
@@ -59,7 +59,7 @@ def main():
     print(plan)
 
     # ---------------------------------
-    # 4. Extraer frames  - Detectar escenas
+    # 4. Extraer frames  
     # ---------------------------------
 
     start = perf_counter()
@@ -74,7 +74,7 @@ def main():
 
     extraction_time = perf_counter() - start
 
-    print("\nESCENAS DETECTADAS")
+    print("\nFRAMES_EXTRAIDOS")
     print(original_collection)
 
     # ---------------------------------
@@ -90,7 +90,7 @@ def main():
         original_collection
     )
 
-    ##filtering_time = perf_counter() - start
+    filtering_time = perf_counter() - start
 
     print("\nDESPUÉS DEL FILTRO")
     print(filtered_collection)
